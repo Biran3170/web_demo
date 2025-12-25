@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 export const useAuthStore = defineStore('auth', {
   state: () => ({
     user: null,
-    users: [
+    users: JSON.parse(localStorage.getItem('user_db')) || [
       { username: 'admin', password: '123' } 
     ]
   }),
@@ -15,6 +15,7 @@ export const useAuthStore = defineStore('auth', {
         return false;
       }
       this.users.push({ username, password });
+      localStorage.setItem('user_db', JSON.stringify(this.users));
       return true;
     },
     login(username, password) {
