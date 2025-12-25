@@ -5,7 +5,7 @@ export const useShopStore = defineStore('shop', {
     products: [
       { id: 1, name: 'Vòng cá đại dương', color: 'xanh nuoc bien, xanh, lam', price: 150000, stock: 5, img: '/img/cadaiduong.jpg' },
       { id: 2, name: 'Vòng đỏ dâu tây', color: 'do', price: 50000, stock: 0, img: '/img/dodautay.jpg' },
-      { id: 3, name: 'Vòng bé mèo kẹo mút', color: 'trang', price: 300000, stock: 3, img: '/img/meokemut.jpg' }
+      { id: 3, name: 'Vòng bé mèo kẹo mút', color: 'trang', price: 300000, stock: 3, img: '/img/meokeomut.jpg' }
     ],
     cart: []
   }),
