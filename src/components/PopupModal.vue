@@ -9,7 +9,7 @@ defineEmits(['close', 'add-cart'])
   <div class="popup-overlay" @click.self="$emit('close')">
     <div class="popup-box">
       <h3>{{ product.name }}</h3>
-      <div class="img-placeholder">Ảnh to rõ nét</div>
+      <img :src="product.img" alt="Chi tiết" class="popup-img" />
       <p class="price">Giá: {{ product.price.toLocaleString() }} đ</p>
       
       <div class="actions">
@@ -50,7 +50,14 @@ defineEmits(['close', 'add-cart'])
     }
   }
 }
-
+.popup-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin: 15px 0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
