@@ -7,7 +7,7 @@ defineEmits(['open-popup'])
 
 <template>
   <div class="card">
-    <div class="card-img">Ảnh Demo</div>
+    <img :src="product.img" alt="sp" class="card-img" />
     <h3>{{ product.name }}</h3>
     
     <p v-if="product.stock > 0" class="stock">Còn: {{ product.stock }} chiếc</p>
@@ -41,5 +41,11 @@ defineEmits(['open-popup'])
     width: 100%; 
     margin-top: 10px;
   }
+}
+.card-img {
+  width: 100%;  
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 </style>
