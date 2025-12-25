@@ -1,0 +1,25 @@
+$primary-pink: #ffb7b2;
+$bg-cream: #fff3e0;
+$text-dark: #4a4a4a;
+$danger: #ff6f69;
+$success: #96ceb4;
+@mixin btn-theme($bg-color) {
+  background-color: $bg-color;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: $text-dark;
+  margin: 0;
+  background-color: #fafafa;
+}
